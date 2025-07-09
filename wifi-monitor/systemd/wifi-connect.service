@@ -1,0 +1,15 @@
+[Unit]
+Description=Industrial WiFi Monitor
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/home/smability/industrial-wifi-monitor.sh
+Restart=always
+RestartSec=5
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
